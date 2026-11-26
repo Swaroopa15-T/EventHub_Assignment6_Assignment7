@@ -2,7 +2,7 @@ import re
 from playwright.sync_api import Page, expect
 
 EMAIL = "swarooparajbhan@gmail.com"          # your EventHub login
-PASSWORD = "Swaru@123"    # your EventHub password
+PASSWORD =  "your-password-here"   # your EventHub password
 
 CUSTOMER_NAME = "Test Customer"
 CUSTOMER_EMAIL = "test.customer@example.com"
@@ -119,7 +119,6 @@ def test_two_bookings_reconcile(page: Page):
     expect(summary).to_contain_text(re.compile(rf"Tickets\s*{b1['tickets']}(?!\d)"))
     expect(summary).to_contain_text(b1["total"])
 
-    # Step 10: second booking, found again by reference
     page.goto("/bookings")
     find_card(page, b2["ref"]).get_by_text("View Details").click()
     expect(page).to_have_url(re.compile(r"/bookings/\d+"))

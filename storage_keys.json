@@ -1,0 +1,10 @@
+{
+  "localStorage": {
+    "eventhub_token": "eyJhbGciOiJIUzI1NiIsInR5c..."
+  },
+  "api_calls": [
+    "GET https://api.eventhub.rahulshettyacademy.com/api/config",
+    "POST https://api.eventhub.rahulshettyacademy.com/api/auth/login",
+    "GET https://api.eventhub.rahulshettyacademy.com/api/events?limit=6"
+  ]
+}
